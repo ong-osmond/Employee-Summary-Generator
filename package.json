@@ -1,0 +1,35 @@
+{
+  "name": "employee-summary-generator",
+  "version": "1.0.0",
+  "description": "Employee Summary Generator using Node.js with JEST",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.2",
+    "jest": "^26.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ong-osmond/Employee-Summary-Generator.git"
+  },
+  "keywords": [
+    "node.js",
+    "cli",
+    "jest",
+    "inquirer",
+    "employee",
+    "summary"
+  ],
+  "author": "Osmond Ong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ong-osmond/Employee-Summary-Generator/issues"
+  },
+  "homepage": "https://github.com/ong-osmond/Employee-Summary-Generator#readme"
+}
