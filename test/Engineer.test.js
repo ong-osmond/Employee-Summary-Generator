@@ -1,5 +1,25 @@
 const Engineer = require("../lib/engineer");
 
+//Tests from develop library folder
+test("Can set GitHUb account via constructor", () => {
+    const testValue = "GitHubUser";
+    const e = new Engineer("Foo", 1, "test@test.com", testValue);
+    expect(e.github).toBe(testValue);
+  });
+  
+  test("getRole() should return \"Engineer\"", () => {
+    const testValue = "Engineer";
+    const e = new Engineer("Foo", 1, "test@test.com", "GitHubUser");
+    expect(e.getRole()).toBe(testValue);
+  });
+  
+  test("Can get GitHub username via getGithub()", () => {
+    const testValue = "GitHubUser";
+    const e = new Engineer("Foo", 1, "test@test.com", testValue);
+    expect(e.getGithub()).toBe(testValue);
+  });
+  
+//Custom tests written by me
 describe("Engineer", () => {
     describe("Initialization", () => {
         it("should return an object containing a 'name' property when called with the 'new' keyword", () => {
@@ -20,8 +40,9 @@ describe("Engineer", () => {
         });
     });
 
+//Custom tests written by me
     describe("returnEngineerInfo", () => {
-    //     // Positive Tests
+    //     Positive Tests
         it("should return the engineer name", () => {
             const engineer = new Engineer();
             engineer.name = "Engineer John Doe";
