@@ -14,31 +14,44 @@ const render = require("./lib/htmlRenderer");
 
 //Initialise Employees Array
 var employeesArray = [];
+//Validate an input must be entered
+var validateInputIsNotEmpty = function validateName(input) {
+    return input !== '';
+};
+//Validate email address is in the right format
+var validateEmail = function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
 
 //Begin to inquire; start with the manager
 function initialiseProgram() {
-    console.log("Welcome to the Employee Summary Generator. Press Control+C anytime to exit.");
+    console.log("Welcome to the Employee Summary Generator. Enter your answer then press ENTER to continue or press CTRL+C any time to exit.");
     inquirer
         .prompt([
             {
                 type: "input",
                 message: "Enter the name of the Manager",
-                name: "managerName"
+                name: "managerName",
+                validate: validateInputIsNotEmpty
             },
             {
                 type: "input",
                 message: "Enter Manager ID",
-                name: "managerId"
+                name: "managerId",
+                validate: validateInputIsNotEmpty
             },
             {
                 type: "input",
                 message: "Enter Manager email address",
-                name: "managerEmail"
+                name: "managerEmail",
+                validate: validateEmail
             },
             {
                 type: "input",
                 message: "Enter Manager office number",
-                name: "managerOfficeNumber"
+                name: "managerOfficeNumber",
+                validate: validateInputIsNotEmpty
             }
         ])
         .then(function (response) {
@@ -86,22 +99,26 @@ function addEngineer() {
             {
                 type: "input",
                 message: "Enter the name of the Engineer",
-                name: "engineerName"
+                name: "engineerName",
+                validate: validateInputIsNotEmpty
             },
             {
                 type: "input",
                 message: "Enter Engineer ID",
-                name: "engineerId"
+                name: "engineerId",
+                validate: validateInputIsNotEmpty
             },
             {
                 type: "input",
                 message: "Enter Engineer email address",
-                name: "engineerEmail"
+                name: "engineerEmail",
+                validate: validateEmail
             },
             {
                 type: "input",
                 message: "Enter Engineer Github ID",
-                name: "engineerGithub"
+                name: "engineerGithub",
+                validate: validateInputIsNotEmpty
             }
         ])
         .then(function (response) {
@@ -119,22 +136,26 @@ function addIntern() {
             {
                 type: "input",
                 message: "Enter the name of the Intern",
-                name: "internName"
+                name: "internName",
+                validate: validateInputIsNotEmpty
             },
             {
                 type: "input",
                 message: "Enter Intern ID",
-                name: "internId"
+                name: "internId",
+                validate: validateInputIsNotEmpty
             },
             {
                 type: "input",
                 message: "Enter Intern email address",
-                name: "internEmail"
+                name: "internEmail",
+                validate: validateEmail
             },
             {
                 type: "input",
                 message: "Enter Intern school",
-                name: "internSchool"
+                name: "internSchool",
+                validate: validateInputIsNotEmpty
             }
         ])
         .then(function (response) {
@@ -153,7 +174,7 @@ function renderEmployees(employeesArray) {
             if (err) {
                 return console.log(err);
             }
-            console.log("Employee Summary HTML file successfuly generated. Please check the output folder.");
+            console.log("Employee Summary HTML file successfuly generated. Please check team.html in the output folder.");
         }
     );
 }
