@@ -4,7 +4,8 @@
 ## Description: 
 Welcome to my Employee Summary Generator using Node.js and the modules INQUIRER and JEST.
 Inquirer is used to prompt the user to enter employee details. JEST is used to run unit tests on the application.
-This is the link to a video demonstrating the application: https://drive.google.com/file/d/1CrJ6TjLbtWzO2ChNdIytVnpUDagezvv5/view (for the best video resolution, please select the 720p quality option).
+
+This is the link to a video demonstrating the application: https://drive.google.com/file/d/12NZwwFN0H2NqaGftcrT2DKeKeMPXJtpk/view?usp=sharing (for the best video resolution, please select the 720p quality option).
 
 (This project has been added to my Portfolio page at https://ong-osmond.github.io/Osmond-Ong-Portfolio/#portfolio.)
 
