@@ -26,19 +26,23 @@ This is the link to a video demonstrating the application: https://drive.google.
 Follow these steps to generate the Employee Summary / Team HTML file:
 
 1. Open Git Bash or your Command Line tool and type in "NODE APP".
+![Run Node App](/assets/img/01-Run-Node-App.png)
 
 2. A series of prompts will ask you to enter the details of your employees. A team is composed of a Manager, one or more Engineers, and/or one or more Interns.  
+![Enter Details](/assets/img/03-Add-More-Employees.png)
 
 3. After typing in your answer to each prompt, press ENTER to proceed to the next prompt. 
-
-If you did not enter an answer or typed in an invalid email address, the program will not continue and return an error message.
+   If you did not enter an answer or typed in an invalid email address, the program will not continue and return an error message.
+   You may exit the program at any time by typing in CTRL+C.
+![Enter Details and Input Validations](/assets/img/02-Input-Validations.png)   
 
 4. You may enter as many Engineers or Interns as desired. 
 
 5. If you select No when asked if another employee should be entered, a message will tell you that the team.html file has been generated. This is saved in the "output" folder.
+![End Program](/assets/img/04-End-Program.png)   
 
 6. Open your team.html file to confirm that everything has been saved correctly.  
-
+![Team HTML File](/assets/img/05-Team-HTML-File.png)   
 
 ## Contributing: 
 Everyone is welcome to contribute to this project. Please email me at ong.osmond@yahoo.com or fork the project from GitHub to your own repository.
@@ -46,6 +50,7 @@ Everyone is welcome to contribute to this project. Please email me at ong.osmond
 ## Tests: 
 Test js files are available in the "test" folder.
 Open Git Bash or your Command Line tool and type in "NPM RUN TEST" to run all the tests (or run a single test suite by typing in its filename, e.g. "NPM RUN TEST TEST/Employee.test.js").
+![Node Run Test](/assets/img/06-Run-Tests.png)   
 For reference, these tests have been included:
   
   Employee:
