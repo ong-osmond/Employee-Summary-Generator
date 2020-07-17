@@ -14,19 +14,25 @@ const render = require("./lib/htmlRenderer");
 
 //Initialise Employees Array
 var employeesArray = [];
+
 //Validate an input must be entered
 var validateInputIsNotEmpty = function validateName(input) {
-    return input !== '';
+    if (input !== '') {
+        return true;
+    } else return `Please enter a value.`;
 };
+
 //Validate email address is in the right format
 var validateEmail = function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    if (re.test(String(email).toLowerCase())) {
+        return true;
+    } else return `Please enter a valid email address.`;
 };
 
 //Begin to inquire; start with the manager
 function initialiseProgram() {
-    console.log("Welcome to the Employee Summary Generator. Enter your answer then press ENTER to continue or press CTRL+C any time to exit.");
+    console.log("Welcome to the Employee Summary Generator. Enter your answer then press ENTER to continue or press CTRL+C at any time to exit.");
     inquirer
         .prompt([
             {
