@@ -20,7 +20,6 @@ This is the link to a video demonstrating the application: https://drive.google.
 3. Open Git Bash or any Command Line tool and type in "NPM INSTALL". 
 4. Install the Inquirer module by typing in "NPM INSTALL INQUIRER".
 5. Install the JEST module by typing in "NPM INSTALL JEST".
-5. In the project directory, create a folder named "output". This is where the final team HTML file will be saved.
 
 ## Usage: 
 Follow these steps to generate the Employee Summary / Team HTML file:
@@ -32,7 +31,7 @@ Follow these steps to generate the Employee Summary / Team HTML file:
 ![Enter Details](/assets/img/03-Add-More-Employees.png)
 
 3. After typing in your answer to each prompt, press ENTER to proceed to the next prompt. 
-   If you did not enter an answer or typed in an invalid email address, the program will not continue and return an error message.
+   If you did not enter an answer, or did not enter a number for the employee ID or Manager office number, or typed in an invalid email address, the program will not continue and return an error message.
    You may exit the program at any time by typing in CTRL+C.
 ![Enter Details and Input Validations](/assets/img/02-Input-Validations.png)   
 

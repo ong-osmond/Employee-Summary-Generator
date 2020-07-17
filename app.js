@@ -22,6 +22,14 @@ var validateInputIsNotEmpty = function validateName(input) {
     } else return `Please enter a value.`;
 };
 
+//Validate a number must be entered
+var validateNumber = function validateNumber(number) {
+    var reg = /^\d+$/;
+    if (reg.test(number)) {
+        return true;
+    } else return `Please enter a valid number.`;
+};
+
 //Validate email address is in the right format
 var validateEmail = function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -45,7 +53,7 @@ function initialiseProgram() {
                 type: "input",
                 message: "Enter Manager ID",
                 name: "managerId",
-                validate: validateInputIsNotEmpty
+                validate: validateNumber
             },
             {
                 type: "input",
@@ -57,7 +65,7 @@ function initialiseProgram() {
                 type: "input",
                 message: "Enter Manager office number",
                 name: "managerOfficeNumber",
-                validate: validateInputIsNotEmpty
+                validate: validateNumber
             }
         ])
         .then(function (response) {
@@ -112,7 +120,7 @@ function addEngineer() {
                 type: "input",
                 message: "Enter Engineer ID",
                 name: "engineerId",
-                validate: validateInputIsNotEmpty
+                validate: validateNumber
             },
             {
                 type: "input",
@@ -149,7 +157,7 @@ function addIntern() {
                 type: "input",
                 message: "Enter Intern ID",
                 name: "internId",
-                validate: validateInputIsNotEmpty
+                validate: validateNumber
             },
             {
                 type: "input",
@@ -175,6 +183,10 @@ function addIntern() {
 //Create the HTML file and exit program
 function renderEmployees(employeesArray) {
     var renderedHMTL = render(employeesArray);
+    //Check if output folder exists; if not, create the directory
+    if (!fs.existsSync(OUTPUT_DIR)){
+        fs.mkdirSync(OUTPUT_DIR);
+    }
     fs.writeFile(outputPath, renderedHMTL,
         function (err) {
             if (err) {
