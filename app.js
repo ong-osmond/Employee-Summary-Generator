@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -153,7 +155,7 @@ function renderEmployees(employeesArray) {
             }
             console.log("Employee Summary HTML file successfuly generated. Please check the output folder.");
         }
-    )
+    );
 }
 
 initialiseProgram();

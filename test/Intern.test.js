@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const Intern = require("../lib/intern");
 
 //Tests from develop library folder
@@ -41,7 +42,7 @@ describe("Intern", () => {
     });
 
     describe("returnInternInfo", () => {
-    //     // Positive Tests
+    //Positive Tests
         it("should return the intern name", () => {
             const intern = new Intern();
             intern.name = "Intern John Doe";
@@ -67,7 +68,7 @@ describe("Intern", () => {
             expect(intern.getRole()).toEqual("Intern");
         });
 
-        // Exception tests
+    // Exception tests
         it("should throw an error if not provided an intern name", () => {
             const intern = new Intern();
             //intern.name = "Intern John Doe";

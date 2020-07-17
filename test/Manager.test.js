@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const Manager = require("../lib/Manager");
 const Employee = require("../lib/Employee");
 
@@ -44,7 +45,7 @@ describe("Manager", () => {
     });
 
     describe("returnManagerInfo", () => {
-         // Positive Tests
+    // Positive Tests
         it("should return the Manager name", () => {
             const manager = new Manager();
             manager.name = "Manager John Doe";
@@ -70,7 +71,7 @@ describe("Manager", () => {
             expect(manager.getRole()).toEqual("Manager");
         });
 
-        // Exception tests
+    // Exception tests
         it("should throw an error if not provided an Manager name", () => {
             const manager = new Manager();
             //manager.name = "Manager John Doe";

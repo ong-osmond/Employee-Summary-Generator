@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const Employee = require("../lib/employee");
 
 //Tests from develop library folder
@@ -68,7 +69,7 @@ describe("Employee", () => {
     });
 
     describe("returnEmployeeInfo", () => {
-        // Positive Tests
+    // Positive Tests
         it("should return the employee name", () => {
             const employee = new Employee();
             employee.name = "John Doe";
@@ -89,7 +90,7 @@ describe("Employee", () => {
             expect(employee.getRole()).toEqual("Employee");
         });
 
-        // Exception tests
+    // Exception tests
         it("should throw an error if not provided an employee name", () => {
             const employee = new Employee();
             //employee.name = "John Doe";

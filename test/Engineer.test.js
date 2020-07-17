@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const Engineer = require("../lib/engineer");
 
 //Tests from develop library folder
@@ -40,9 +41,8 @@ describe("Engineer", () => {
         });
     });
 
-//Custom tests written by me
     describe("returnEngineerInfo", () => {
-    //     Positive Tests
+    //Positive Tests
         it("should return the engineer name", () => {
             const engineer = new Engineer();
             engineer.name = "Engineer John Doe";
@@ -68,7 +68,7 @@ describe("Engineer", () => {
             expect(engineer.getRole()).toEqual("Engineer");
         });
 
-        // Exception tests
+    // Exception tests
         it("should throw an error if not provided an engineer name", () => {
             const engineer = new Engineer();
             //engineer.name = "Engineer John Doe";
