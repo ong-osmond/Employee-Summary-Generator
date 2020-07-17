@@ -47,7 +47,9 @@ Everyone is welcome to contribute to this project. Please email me at ong.osmond
 Test js files are available in the "test" folder.
 Open Git Bash or your Command Line tool and type in "NPM RUN TEST" to run all the tests (or run a single test suite by typing in its filename, e.g. "NPM RUN TEST TEST/Employee.test.js").
 For reference, these tests have been included:
+  
   Employee:
+  
   1. Can instantiate Employee instance 
   2. Can set name via constructor arguments 
   3. Can set id via constructor argument
@@ -56,19 +58,26 @@ For reference, these tests have been included:
   6. Can get id via getId() 
   7. Can get email via getEmail()
   8. getRole() should return "Employee"
+  
   Manager:
-  9. Can set office number via constructor argument (3 ms)
-  10. getRole() should return "Manager" (1 ms)
+  
+  9. Can set office number via constructor argument 
+  10. getRole() should return "Manager" 
   11. Can get office number via getOffice()
+  
   Engineer:
-  12. Can set GitHUb account via constructor (2 ms)
-  13. getRole() should return "Engineer" (1 ms)
+  
+  12. Can set GitHUb account via constructor 
+  13. getRole() should return "Engineer" 
   14. Can get GitHub username via getGithub()
+  
   Intern:
-  15. Can set school via constructor (3 ms)
+  
+  15. Can set school via constructor
   16. getRole() should return "Intern"
   17. Can get school via getSchool()
-Additional tests have been included for positive and exception cases.
+  
+Additional tests have been included for positive and exception cases. Please refer to the test files.
  
 
 ## Questions: 
